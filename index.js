@@ -8,4 +8,8 @@ app.use(bodyParser.json());
 app.use('/users', userRoutes);
 app.get('/', (req,res) => res.send('Hello from Homepage.')
 );
+app.use(bodyParser.json());
+app.use('/users', userRoutes);
+app.get('/', (req,res) => res.send('Getting Input')
+);
 app.listen(PORT, () => console.log(`Server running on port: http://localhost:${PORT}`));
